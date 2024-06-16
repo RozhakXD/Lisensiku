@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisensiku - Pembayaran</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='payment.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='lisensiku.ico') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo Lisensiku">
+        </div>
+        <h2>Pembayaran Lisensi</h2>
+        <div class="payment-info">
+            <a href="{{ url_for('static', filename='qris-download.jpg') }}" download>
+                <img src="{{ url_for('static', filename='qris.jpg') }}" alt="Qris">
+            </a>
+            <ol>
+                <li>Silakan buka aplikasi pembayaran di smartphone Anda (misalnya: GoPay, OVO, Dana, ShopeePay, dll).</li>
+                <li>Pilih menu "Scan QR Code" atau "Pembayaran QRIS".</li>
+                <li>Scan QR Code yang tertera di atas.</li>
+                <li>Masukkan nominal pembayaran yang sesuai.</li>
+                <li>Klik konfirmasi pembayaran dan tunggu ACC dari admin.</li>
+            </ol>
+        </div>
+        <div class="button-container">
+            <a class="confirm-button" href="https://api.whatsapp.com/send?phone=6283847921480" target="_blank">Konfirmasi Pembayaran</a>
+            <a href="{{ url_for('dashboard') }}" class="back-button">Kembali</a>
+        </div>
+    </div>
+</body>
+</html>

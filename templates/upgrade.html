@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisensiku - Upgrade</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='upgrade.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='lisensiku.ico') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo Lisensiku">
+        </div>
+        <h2>Daftar Harga Lisensi</h2>
+        <div class="pricing-table">
+            <div class="pricing-card">
+                <h3>Rp25.000/1 Minggu</h3>
+                <ul>
+                    <li>Kualitas: Standar</li>
+                    <li>Akses: Limited</li>
+                    <li>Kecepatan: Bagus</li>
+                </ul>
+                <a href="{{ url_for('payment') }}" class="button buy-button">Beli</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Rp35.000/2 Minggu</h3>
+                <ul>
+                    <li>Kualitas: Standar</li>
+                    <li>Akses: Limited</li>
+                    <li>Kecepatan: Bagus</li>
+                </ul>
+                <a href="{{ url_for('payment') }}" class="button buy-button">Beli</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Rp60.000/1 Bulan</h3>
+                <ul>
+                    <li>Kecepatan: Bagus</li>
+                    <li>Kualitas: Baik</li>
+                    <li>Akses: Unlimited</li>
+                </ul>
+                <a href="{{ url_for('payment') }}" class="button buy-button">Beli</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Rp100.000/2 Bulan</h3>
+                <ul>
+                    <li>Kecepatan: Bagus</li>
+                    <li>Kualitas: Baik</li>
+                    <li>Akses: Unlimited</li>
+                </ul>
+                <a href="{{ url_for('payment') }}" class="button buy-button">Beli</a>
+            </div>
+        </div>
+        <div class="options">
+            <a href="{{ url_for('dashboard') }}" class="button back-button">Kembali ke Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisensiku - Reset Password</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='lisensiku.ico') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo Lisensiku">
+        </div>
+        <h2>Reset Password</h2>
+        <form action="/reset" method="POST">
+            <input type="email" name="email" placeholder="Alamat Email" required>
+            {% if status == 'Error' %}
+                <p class="error-message">{{ message }}</p>
+            {% elif status == 'Success' %}
+                <p class="success-message">{{ message }}</p>
+            {% endif %}
+            <button type="submit">Kirim</button>
+        </form>
+        <div class="login">
+            <p>Sudah memiliki akun? <a href="{{ url_for('login') }}">Masuk</a></p>
+        </div>
+    </div>
+</body>
+</html>

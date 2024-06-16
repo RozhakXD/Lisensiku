@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisensiku - Masuk</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='lisensiku.ico') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo Lisensiku">
+        </div>
+        <h2>Masuk Layanan</h2>
+        {% if status == 'Error' %}
+            <p class="error-message">{{ message }}</p>
+        {% endif %}
+        <form action="/login?next={{ next }}" method="POST">
+            <input type="email" name="email" value="{{ remembered_email }}" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" minlength="6" required>
+            <button type="submit">Sign in</button>
+            <div class="options">
+                <label>
+                    <input type="checkbox" name="remember_me"> Remember Me
+                </label>
+                <a href="{{ url_for('reset_password') }}">Lupa password?</a>
+            </div>
+            <div class="register">
+                <p>Belum memiliki akun? <a href="{{ url_for('register') }}">Daftar</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

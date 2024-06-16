@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 650px;
+    overflow: hidden;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.logo img {
+    width: 100px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.payment-info {
+    margin-bottom: 10px;
+}
+
+.payment-info img {
+    border: 2px solid #000000;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+}
+
+.payment-info ol {
+    margin-top: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.confirm-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3bbbad;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.confirm-button:hover {
+    background-color: #26a69a;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .payment-info img {
+        width: 190px;
+    }
+
+    .payment-info ol {
+        padding-left: 20px;
+    }
+
+    .payment-info li {
+        margin-bottom: 10px;
+    }
+}

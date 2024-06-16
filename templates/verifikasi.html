@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisensiku - Verifikasi Email</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='lisensiku.ico') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo Lisensiku">
+        </div>
+        <h2>Verifikasi Email</h2>
+        <div class="description">
+            <p>Kami telah mengirim email verifikasi ke alamat email Anda. Silakan masukkan kode 6 digit yang Anda temukan di email tersebut untuk menyelesaikan proses verifikasi.</p>
+            <p>**Jika Anda tidak menemukan email verifikasi, periksa folder spam Anda.**</p>
+        </div>
+        <form action="/verifikasi" method="POST">
+            <input type="text" name="verification_code" id="verification_code" placeholder="Kode Verifikasi" maxlength="6" required>
+            {% if status == 'Error' %}
+                <p class="error-message">{{ message }}</p>
+            {% endif %}
+            <button type="submit">Verifikasi</button>
+        </form>
+    </div>
+</body>
+</html>

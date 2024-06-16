@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisensiku - Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dashboard.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='lisensiku.ico') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo Lisensiku">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                    <li><a href="{{ url_for('upgrade') }}">Harga Lisensi</a></li>
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="user-info">
+                <h2>Informasi Pengguna</h2>
+                <p><strong>Nama Lengkap:</strong> {{ user_info.name }}</p>
+                <p><strong>Email:</strong> {{ user_info.email }}</p>
+                <p><strong>Lisensi:</strong> {{ user_info.license }}</p>
+                <p><strong>Type:</strong> {{ user_info.type }}</p>
+                <p><strong>Masa Berlaku:</strong> {{ user_info.expiry_date }}</p>
+            </section>
+            <section class="session-info">
+                <h2>Informasi Sesi</h2>
+                <p><strong>Sistem Operasi:</strong> {{ session_info.platform }}</p>
+                <p><strong>Browser:</strong> {{ session_info.browser }}</p>
+                <p><strong>Versi:</strong> {{ session_info.version }}</p>
+                <p><strong>IP Address:</strong> {{ session_info.ip_address }}</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
