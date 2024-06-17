@@ -8,7 +8,8 @@ Lisensiku adalah sebuah projek yang dibangunkan untuk mengelola API key pengguna
 
 1. Clone repository ini ke komputer anda menggunakan perintah `git clone https://github.com/RozhakXD/Lisensiku.git`
 2. Install Flask menggunakan perintah `pip install flask`
-3. Jalankan aplikasi menggunakan perintah `flask run`
+3. Install Python User Agents menggunakan perintah `pip install user-agents`
+4. Jalankan aplikasi menggunakan perintah `flask run`
 
 ## Contoh Penggunaan API
 
