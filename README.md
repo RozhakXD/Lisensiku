@@ -1,4 +1,4 @@
-# Lisensiku
+# Lisensiku - Server
 
 Lisensiku adalah sebuah projek yang dibangunkan untuk mengelola API key pengguna. Lisensiku dibangun menggunakan Flask, HTML, CSS, dan SQLite. Projek ini bertujuan untuk memudahkan pengelolaan API key pengguna.
 
